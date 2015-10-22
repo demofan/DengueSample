@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Sample Web</title>
+    <style>
+          html {
+              height: 100%;
+          }
+
+          body {
+              height: 100%;
+              margin: 0;
+              padding: 0;
+          }
+
+          .gmap {
+              width: 100%;
+              height: 100%;
+          }
+          .cluster {
+              display: block;
+              background: #00acec;
+              color: #fff;
+              text-align: center;
+              font-family: Verdana;
+              font-size: 16px;
+              font-weight: bold;
+              border-radius: 5px;
+              padding: 4px 10px;
+              position: relative;
+          }
+
+              .cluster:after {
+                  content: "";
+                  border-top: #00acec 5px solid;
+                  border-bottom: transparent 5px solid;
+                  border-left: transparent 5px solid;
+                  border-right: transparent 5px solid;
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  bottom: -10px;
+                  left: 50%;
+                  margin-left: -5px;
+              }
+
+              .cluster:before {
+                  content: "";
+                  text-align: center;
+                  display: block;
+                  background: url(img/m1.png) center center no-repeat;
+                  background-size: 40px 32px;
+                  line-height: 50px;
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 25px;
+                  position: absolute;
+                  bottom: -55px;
+                  left: 50%;
+                  margin-left: -25px;
+              }
+        .cluster-1:before{
+          background: url(img/m1.png) center center no-repeat;
+          background-color: #ff8400;
+        }
+        .cluster-2:before{
+          background: url(img/m2.png) center center no-repeat;
+          background-color: #ff4200;
+        }
+        .cluster-3:before{
+          background: url(img/m3.png) center center no-repeat;
+          background-color: #cc0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test_map" class="gmap"></div>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=zh-tw"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+    <script src="js/gmap3.js"></script>
+    <script src="js/xdate.js"></script>
+    <script src="js/demo.js"></script>
+</body>
+</html>

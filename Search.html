@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Sample Web</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container body-content">
+    <div class="row">
+        
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <br/>
+            <button class="btn btn-primary" data-search="&search=高雄">搜尋高雄病例</button>
+            <button class="btn btn-success" data-search="&search=台南">搜尋台南病例</button>
+            <button class="btn btn-warning" data-search="&$filter=live_add1 eq '北區' or live_add1 eq '南區'">搜尋北區＆南區</button>
+            <button class="btn btn-info" data-search="&$orderby=gender desc">使用性別排序</button>
+            <div class="btn-group" role="group">
+                <button class="btn btn-danger" data-search="&search=南">不指定欄位搜尋[南]</button>
+                <button class="btn btn-danger" data-search="&search=南&searchFields=live_add1">指定欄位搜尋[南]</button>
+            </div>
+            <button class="btn btn-info" data-search="&search=南&facet=gender">分類列</button>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-4" id="sidebar">
+                <ul class="list-group" id="ajax_catgory">
+                </ul>
+            </div>
+            <div class="col-md-12" id="main">
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>發病日</th>
+                        <th>居住縣市</th>
+                        <th>性別</th>
+                    </tr>
+                    </thead>
+                    <tbody id="ajax_append"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/demo.js"></script>
+</body>
+</html>

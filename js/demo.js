@@ -108,9 +108,8 @@ function bindingGmap() {
                     $.each(response, function (index) {
                         var y = parseFloat(response[index].info_y);
                         var x = parseFloat(response[index].info_x);
-                        var triggerDate = new XDate(response[index].attack_date);
-                        var now = new XDate().addDays(-10);
-                        if (isNaN(y) == false && isNaN(x) == false && triggerDate > now) {
+
+                        if (isNaN(y) == false && isNaN(x) == false) {
                             mapValues.push({
                                 latLng: [y, x],
                                 options: { icon: response[index].gender == "女" ? "img/female.png" : "img/male.png" }
